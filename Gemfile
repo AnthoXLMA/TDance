@@ -27,7 +27,8 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "devise"
 gem 'tailwindcss-rails'
-
+gem 'devise_token_auth'
+gem 'omniauth'
 
 
 # Use Redis adapter to run Action Cable in production
