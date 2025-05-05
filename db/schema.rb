@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_05_05_144055) do
+ActiveRecord::Schema[7.1].define(version: 2025_05_05_160458) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -80,7 +80,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_05_144055) do
     t.string "username"
     t.string "location"
     t.text "description"
-    t.string "dancing_styles"
+    t.string "dancing_styles", default: [], array: true
     t.string "level"
     t.string "avatar"
     t.datetime "created_at", null: false
