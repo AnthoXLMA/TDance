@@ -1,4 +1,13 @@
 <h1 class="text-3xl font-bold text-center my-4">Mes matchs</h1>
+<% if @user && @user.photos.attached? %>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+    <% @user.photos.each do |photo| %>
+      <%= image_tag photo.variant(resize_to_limit: [300, 300]), class: "rounded-lg" %>
+    <% end %>
+  </div>
+<% else %>
+  <p>Aucune photo ajoutée.</p>
+<% end %>
 
 <% if @matches.any? %>
   <ul class="space-y-4">

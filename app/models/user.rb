@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :matches_as_user2, class_name: "Match", foreign_key: "user2_id"
 
   has_many :messages, dependent: :destroy
+  has_one_attached :avatar
+  has_many_attached :photos
 
   def matches
     Match.where("user1_id = ? OR user2_id = ?", self.id, self.id)

@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  get 'users/edit'
-  get 'users/update'
-  get 'messages/create'
-  get 'matches/index'
-  get 'matches/show'
-  get 'swipes/index'
-  get 'swipes/create'
+# config/routes.rb
+
+# Routes de Devise
 devise_for :users
 
 resources :swipes, only: [:create]
@@ -15,6 +11,9 @@ end
 
 root "swipes#index"
 
+# Profile route (par exemple, si tu veux personnaliser les actions)
 resource :profile, only: [:edit, :update], controller: "users"
+
+
 end
 
