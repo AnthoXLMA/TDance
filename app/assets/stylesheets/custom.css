@@ -1,0 +1,95 @@
+/* custom.css */
+
+/* Couleurs principales */
+:root {
+    --primary-color: #ff4f58; /* Rouge vibrant - pour l'énergie et la passion */
+    --secondary-color: #2e2e2e; /* Gris foncé - pour une touche élégante et moderne */
+    --accent-color: #f1c40f; /* Or - pour le luxe et l'élégance */
+    --background-color: #fff8f0; /* Blanc cassé - pour un fond léger */
+    --highlight-color: #3498db; /* Bleu électrique - pour la dynamique et la fraîcheur */
+    --text-color: #333; /* Texte sombre pour un contraste agréable */
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    color: var(--accent-color);
+}
+
+/* Boutons */
+button, .btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--highlight-color);
+}
+
+/* Section utilisateur (ex. profil, dashboard) */
+.user-profile {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.user-profile h2 {
+    color: var(--accent-color);
+}
+
+.user-profile .description {
+    font-style: italic;
+}
+
+/* Galerie de photos */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card style pour les éléments dynamiques */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    background-color: var(--highlight-color);
+    color: #fff;
+}
