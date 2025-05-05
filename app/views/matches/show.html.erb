@@ -1,0 +1,18 @@
+<h1 class="text-3xl font-bold text-center my-4">Match entre <%= @match.user1.username %> et <%= @match.user2.username %></h1>
+
+<%= form_with(model: @message, url: match_messages_path(@match), method: :post, class: "mt-4") do |f| %>
+  <div class="flex flex-col space-y-2">
+    <%= f.text_area :content, placeholder: "Écris un message...", class: "border rounded-lg p-2" %>
+    <%= f.submit "Envoyer", class: "bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600" %>
+  </div>
+<% end %>
+
+<h3 class="text-2xl mt-4">Messages</h3>
+<div class="space-y-4 mt-4">
+  <% @messages.each do |message| %>
+    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+      <strong class="text-blue-600"><%= message.user.username %></strong>
+      <p class="mt-2"><%= message.content %></p>
+    </div>
+  <% end %>
+</div>

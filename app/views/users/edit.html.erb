@@ -1,0 +1,39 @@
+<h1 class="text-3xl font-bold text-center my-4">Modifier mon profil</h1>
+
+<%= form_with(model: @user, url: profile_path, method: :put, class: "space-y-4") do |f| %>
+  <div class="flex flex-col space-y-2">
+    <%= f.label :username, class: "font-medium" %>
+    <%= f.text_field :username, class: "border rounded-lg p-2" %>
+  </div>
+  <div class="flex flex-col space-y-2">
+    <%= f.label :location, class: "font-medium" %>
+    <%= f.text_field :location, class: "border rounded-lg p-2" %>
+  </div>
+  <div class="flex flex-col space-y-2">
+    <%= f.label :description, class: "font-medium" %>
+    <%= f.text_area :description, class: "border rounded-lg p-2" %>
+  </div>
+  <div class="flex flex-col space-y-2">
+    <%= f.label :dancing_styles, class: "font-medium" %>
+    <%= f.text_field :dancing_styles, class: "border rounded-lg p-2" %>
+  </div>
+  <div class="flex flex-col space-y-2">
+    <%= f.label :level, class: "font-medium" %>
+    <%= f.text_field :level, class: "border rounded-lg p-2" %>
+  </div>
+  <div class="flex flex-col space-y-2">
+    <%= f.label :morphology, class: "font-medium" %>
+    <%= f.text_field :morphology, class: "border rounded-lg p-2" %>
+  </div>
+  <div class="flex flex-col space-y-2">
+    <%= f.label :height, class: "font-medium" %>
+    <%= f.number_field :height, class: "border rounded-lg p-2" %>
+  </div>
+  <div class="flex flex-col space-y-2">
+    <%= f.label :weight, class: "font-medium" %>
+    <%= f.number_field :weight, class: "border rounded-lg p-2" %>
+  </div>
+  <div class="flex justify-center">
+    <%= f.submit "Mettre à jour le profil", class: "bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600" %>
+  </div>
+<% end %>

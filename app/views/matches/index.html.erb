@@ -1,0 +1,13 @@
+<h1 class="text-3xl font-bold text-center my-4">Mes matchs</h1>
+
+<% if @matches.any? %>
+  <ul class="space-y-4">
+    <% @matches.each do |match| %>
+      <li class="bg-white shadow-md rounded-lg p-4">
+        <%= link_to "#{match.user1.username} & #{match.user2.username}", match_path(match), class: "text-lg font-semibold text-blue-600 hover:text-blue-800" %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p class="text-center text-gray-500">Tu n'as aucun match pour l'instant.</p>
+<% end %>
